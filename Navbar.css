@@ -1,0 +1,1110 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+#hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #006dae;
+    color: #f8f5f5;
+    flex-wrap: wrap;  /* Allows wrapping on smaller screens */
+}
+
+.location-options {
+    margin-top: 9px;
+    flex-grow: 1;  /* Allow the select box to take up remaining space */
+}
+
+.location-options select {
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: #006dae;
+    color: white;
+}
+
+.center-content h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.center-content {
+    margin-top: 9px;
+    flex-grow: 2;  /* Allow this content to take up more space */
+}
+
+.end-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 9px;
+    flex-grow: 1;  /* Allow this section to take up remaining space */
+}
+
+.main-links,
+.user-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.main-links li,
+.user-links li {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.user-links li i {
+    margin-right: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    #hdr {
+        padding: 10px 15px;
+    }
+
+    .location-options select {
+        font-size: 12px;
+    }
+
+    .main-links li,
+    .user-links li {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hdr {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        text-align: left;
+    }
+
+    .location-options,
+    .center-content,
+    .end-content {
+        width: 100%; /* Make each section full width */
+        margin-top: 10px;
+        flex-grow: 0; /* No need for extra space distribution */
+    }
+
+    .main-links,
+    .user-links {
+        flex-direction: column; /* Stack the items vertically */
+        gap: 10px;
+    }
+
+    .main-links li,
+    .user-links li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-options select {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .main-links li,
+    .user-links li {
+        font-size: 14px;
+    }
+}
+
+#bar2 {
+    background-color: #fff; /* White background */
+    height: 100px; /* Height of the bar */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space out logo and center the links */
+    padding: 0 20px; /* Add spacing on the sides */
+    box-sizing: border-box; /* Include padding in width calculations */
+    border-top: 2px solid #006dae; /* Optional border for styling */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Styling for the logo */
+#bar2 img {
+    height: 40px; /* Keep the logo height consistent */
+    margin-right: 20px; /* Add spacing between the logo and navigation */
+}
+
+/* Center the navigation links container */
+#bar2 ul {
+    display: flex; /* Align items horizontally */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0 auto; /* Center the list */
+    padding: 0; /* Remove padding */
+    justify-content: center; /* Center the items */
+    width: 100%;
+}
+
+/* Styling for individual list items */
+#bar2 ul li {
+    margin: 0 15px; /* Add spacing between items */
+    font-size: 14px; /* Adjust text size */
+    font-weight: bold; /* Make text bold */
+    color: #006dae; /* Monash blue for text */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Hover effect for list items */
+#bar2 ul li:hover {
+    color: #004a7c; /* Darker blue on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Icon styling for "MORE" */
+#bar2 ul li i {
+    margin-left: 8px;
+}
+
+/* Styling for the bar3 */
+#bar3 {
+    background-color: #fff;
+    padding: 0;
+    width: 250px;
+}
+
+/* Styling for the "Apply to Study" text */
+#bar3 p {
+    font-size: 12px;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.509);
+    padding: 10px;
+}
+
+/* Hover effect for bar3 p */
+#bar3 p:hover {
+    background-color: #006dae;
+    border: 2px solid #006dae;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Medium screens and below (tablets and smaller screens) */
+@media (max-width: 768px) {
+    #bar2 {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        text-align: left;
+        height: auto; /* Adjust height to fit content */
+        padding: 10px; /* Add some padding for smaller screens */
+    }
+
+    #bar2 img {
+        margin-bottom: 10px; /* Add margin between logo and nav links */
+    }
+
+    #bar2 ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;
+        width: 100%; /* Make the list items take full width */
+        align-items: center;
+    }
+
+    #bar2 ul li {
+        font-size: 16px; /* Larger font size for readability */
+        margin: 5px 0; /* Add spacing between list items */
+    }
+
+    #bar3 {
+        width: 100%; /* Make the 'Apply to Study' container full width */
+        margin-top: 10px;
+    }
+
+    #bar3 p {
+        font-size: 14px; /* Larger font size for readability on mobile */
+        padding: 12px;
+    }
+}
+
+/* For Small screens and below (mobiles) */
+@media (max-width: 480px) {
+    #bar2 {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    #bar2 img {
+        height: 30px; /* Smaller logo size for small screens */
+    }
+
+    #bar2 ul {
+        gap: 5px;
+    }
+
+    #bar2 ul li {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    #bar3 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #bar3 p {
+        font-size: 14px; /* Larger font size for smaller screens */
+        padding: 8px;
+    }
+}
+
+/* Container Styles */
+.bar42 {
+    position: relative; /* Enables positioning for the overlay */
+    background-image: url("Change-of-preference-light-banner-2024.jpg");
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 90vh; /* Full viewport height */
+    width: 100%;
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Centers items vertically */
+    box-sizing: border-box; /* Includes padding in the width */
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+/* Black Dull Filter */
+.bar42::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black filter with 50% opacity */
+    z-index: 1; /* Places it behind the text */
+}
+
+/* Text Styling */
+.overlay1 {
+    z-index: 2; /* Places text above the filter */
+    text-align: start;
+    margin-left: 40px; /* Positions text to the left */
+    color: white; /* White text for contrast */
+}
+
+.overlay1 h2 {
+    font-size: 2.8rem; /* Large font size */
+    font-weight: bold;
+    line-height: 1; /* Adjust line spacing */
+    margin: 0; /* Removes default margin */
+}
+
+.overlay1 p {
+    font-size: 1.5rem; /* Adjusts paragraph font size */
+    margin-top: 10px; /* Adds space between h2 and p */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    margin-top: 20px; /* Space between text and search bar */
+    display: flex; /* Flexbox for input and button */
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+.search-bar input {
+    width: 450px; /* Adjust input width */
+    padding: 15px;
+    border: none;
+    border-radius: 25px; /* Makes the input field rounded */
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    outline: none; /* Removes default focus outline */
+    margin-left: 400px;
+}
+
+.search-bar input:focus {
+    border: 2px solid #007bff; /* Add a border on focus */
+    background-color: #f9f9f9; /* Slightly lighter background on focus */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overlay h2 {
+        font-size: 2.2rem; /* Reduce h2 size for smaller screens */
+    }
+    .overlay p {
+        font-size: 1.2rem; /* Reduce paragraph size for smaller screens */
+    }
+    .search-bar input {
+        width: 200px; /* Adjust input width for smaller screens */
+    }
+    
+}
+/* Container Styles */
+.Change {
+ /* Center elements vertically */
+    text-align: center; /* Center align the text */
+    height: 35vh; /* Full viewport height */
+    padding: 20px; /* Add padding for small screens */
+    box-sizing: border-box; /* Include padding in the width and height */
+}
+
+/* Heading Style */
+.Change h2 {
+    font-size: 2.5rem; /* Large font size for the heading */
+    margin-bottom: 20px; /* Space between h2 and the first paragraph */
+    color: #070707; /* Dark text color */
+    font-weight: bold;
+}
+
+/* Paragraph Styles */
+.Change p {
+    font-size: 1.2rem; /* Paragraph font size */
+    margin: 0; /* Remove default margin */
+    color: #0a0a0a; /* Slightly lighter text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Change h2 {
+        font-size: 2rem; /* Reduce h2 font size for smaller screens */
+    }
+    .Change p {
+        font-size: 1rem; /* Reduce paragraph font size for smaller screens */
+    }
+}
+/* Container for All Cards */
+.cards-container {
+    display: flex; /* Flexbox for horizontal layout */
+    /* gap: 20px;
+     */
+  margin-top: 0px;
+     justify-content: space-between; /* Even spacing between cards */
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    max-width: 1200px; /* Limit width of the container */
+    /* Center the container */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Card Styling */
+.card {
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between text and icon */
+    align-items: center; /* Center items vertically */
+    background-color: #fff; /* White background for the card */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the card */
+    flex: 1; /* Equal width for all cards */
+    min-width: 300px; /* Minimum card width */
+    max-width: 350px; /* Maximum card width */
+    box-sizing: border-box;
+}
+.text-content{
+    height: 15vh;
+}
+.text-content h3 {
+    color: #0056b3; /* Blue color for the heading */
+    font-size: 1.2rem; /* Adjust heading font size */
+    margin: 0 0 10px 0; /* Space below heading */
+    font-weight: bold; /* Bold heading */
+}
+
+.text-content p {
+    color: #555; /* Grey color for the paragraph */
+    font-size: 0.9rem; /* Adjust paragraph font size */
+    margin: 0; /* No margin below paragraph */
+}
+
+/* Icon Styling */
+.icon {
+    font-size: 3rem; /* Icon size */
+    color: #eff0f2; /* Blue color for the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+/* Circular border */
+    border-radius: 50%; /* Make it circular */
+    width: 50px; /* Width of the icon container */
+    height: 50px; /* Height of the icon container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        gap: 15px;
+    }
+    .card {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+    .text-content h3 {
+        font-size: 1rem; /* Smaller heading */
+    }
+    .text-content p {
+        font-size: 0.85rem; /* Smaller paragraph text */
+    }
+}
+/* Overall Section Styling */
+.ranking-section {
+    text-align: center;
+    background: url('THE_Reputation_Web_Banner.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
+
+}
+
+
+/* Heading and Description */
+.ranking-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ranking-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+}
+
+/* Rankings Grid */
+.rankings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+/* Individual Ranking Cards */
+/* Individual Ranking Cards */
+.ranking-card {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black to dull the background */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+
+.ranking-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Icon Styling */
+.ranking-card .icon {
+    font-size: 5rem; /* Icon size */
+    margin-bottom: 15px;
+}
+
+/* Card Text */
+.ranking-card h3 {
+    margin-top: 39px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.ranking-card p {
+    font-size: 1rem;
+    margin-top: 31px;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ranking-section h1 {
+        font-size: 2rem;
+    }
+    .ranking-section p {
+        font-size: 1rem;
+    }
+    .ranking-card h3 {
+        font-size: 1.2rem;
+    }
+    .ranking-card p {
+        font-size: 0.9rem;
+    }
+}
+/* Monash Explorer Section */
+.Monash-explorer {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent overflow caused by the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 20;
+    left: 10;
+    width: 90%;
+    height: 80%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: 1; /* Place the video behind other content */
+}
+
+/* Overlay for Dull Effect */
+.overlay {
+    position: absolute;
+    top: 30;
+    left: 10;
+    width: 45%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 2; /* Place the overlay above the video */
+}
+
+/* Centered Content */
+.Monash-explorer-title {
+    position: relative;
+    z-index: 3; /* Place the text above the overlay */
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Title and Paragraph Styling */
+.Monash-explorer-title h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.Monash-explorer-title p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.Monash-explorer-title button {
+    background-color: #0078d7; /* Monash blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Monash-explorer-title button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Monash-explorer-title h1 {
+        font-size: 2rem;
+    }
+
+    .Monash-explorer-title p {
+        font-size: 1rem;
+    }
+}
+/* Container for the Monash news section */
+.monash-news {
+    display: flex; /* Align image and text side by side */
+    align-items: center; /* Vertically align content */
+    gap: 0; /* No space between the image and text */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the layout horizontally */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5); /* Add shadow */
+}
+
+/* Styling for the image container */
+.news-image {
+    flex: 1; /* Take up equal width as text */
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.news-image img {
+    width: 100%;
+    height: 55vh; /* Maintain aspect ratio */
+    display: block; /* Remove any extra inline spacing */
+}
+
+/* Styling for the text container */
+.news-text {
+    flex: 1; /* Take up equal width as image */
+    padding: 20px; /* Add some padding for text */
+     /* Light background for contrast */
+    box-sizing: border-box;
+    height: 55vh; /* Fixed height */
+    
+    /* border: 2px solid white; */
+  
+}
+#lastest-news{
+    text-align: center;
+    margin-bottom: 57px;
+}
+
+
+.news-text h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #006dae;
+    font-weight: 900;
+}
+
+.news-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1c1c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .monash-news {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .news-image,
+    .news-text {
+        flex: none;
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .news-text {
+        padding: 15px;
+    }
+}
+/* Container Styling */
+.Ethicalconcerns {
+    display: flex;
+    gap: 20px; /* Space between the sections */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content horizontally */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Full-width Section Styling */
+.full-width-section {
+    width: 1700px; /* Full width */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 700px;
+}
+
+.full-width-section h3 {
+    font-size: 1.4rem;
+    color: #006dae;
+
+    margin-bottom: 10px;
+}
+
+.full-width-section img {
+    width: 100%;
+    height: 50vh;
+    margin: 15px 0;
+}
+
+.full-width-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Grid Section Styling */
+.grid-section {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for grid items */
+    gap: 20px;
+    height: 15vh; /* Space between items */
+}
+
+/* Individual Grid Items */
+.grid-item {
+    flex: 1 1 calc(50% - 20px); /* Each item takes 50% width minus the gap */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    
+}
+
+.grid-item:nth-child(3) {
+    flex: 1 1 100%; /* Third item takes full width */
+}
+
+/* Grid Item Image Styling */
+.grid-item img {
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 15px;
+}
+.grid-item1{
+    margin-top: 8px;
+    /* background-color: #ffffff; */
+    height: 69vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    
+    justify-content: space-between;
+}
+.grid-item1 img {
+    width: 220%;
+    height: 71vh;
+    
+}
+
+/* Grid Item Text */
+.grid-item h1 {
+    font-size: 1.2rem;
+    color: #006dae;
+     font-weight: 800px;
+    margin-bottom: 10px;
+}
+.grid-item1 h1 {
+    font-size: 1.5rem;
+    color: #006dae;
+    
+    margin-bottom: 10px;
+}
+
+.grid-item1 p {
+    font-size: 1rem;
+}
+.grid-item2{
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 9px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 1 1 100%; /* All items take full width on smaller screens */
+    }
+
+    .grid-item:nth-child(3) {
+        flex: 1 1 100%;
+    }
+}
+.img-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between images */
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 50vh;
+    height: 60vh;
+    overflow: hidden; /* Ensure hover text doesn't spill outside the container */
+    border-radius: 8px; /* Rounded corners for a polished look */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image scales nicely */
+    transition: transform 0.3s ease; /* Add smooth scaling effect on hover */
+    border-radius: 8px; /* Match the rounded corners */
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  .hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 90%;
+    height: 100%;
+    background-color: #006dae;/* Semi-transparent blue background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    border-radius: 8px; /* Match the rounded corners */
+  }
+  
+  .gallery-item:hover .hover-text {
+    opacity: 1; /* Show text on hover */
+  }
+  
+  .hover-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+     /* Reduced line height for better readability */
+  }
+  
+  .hover-text p {
+    font-size: 1rem;
+    /* margin-bottom: 8px; */
+     /* Reduced line height for better spacing */
+  }
+  
+  .hover-text a {
+    color: #ffd700; /* Highlighted link color (gold) */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .hover-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  .view-more-detail1{
+    text-align: center;
+     margin: 19px;
+  }
+  .view-more-detail1 button{
+    padding: 13px;
+    width: 15%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #006dae;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333; /* Dark background */
+    padding: 20px;
+    color: #fff; /* White text color */
+  }
+  
+  .footer-column {
+    flex: 1; /* Distribute columns evenly */
+    padding: 0 15px; /* Add spacing between columns */
+    box-sizing: border-box;
+  }
+  
+  .footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc; /* Light gray for headings */
+    text-transform: uppercase;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer-column ul li:hover {
+    text-decoration: underline;
+  }
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px;
+    border-top: 2px solid #444;
+  }
+  
+  .footer-info-column {
+    flex: 1;
+    margin-right: 20px; /* Spacing between columns */
+  }
+  
+  .footer-info-column h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ccc; /* Light gray for headings */
+  }
+  
+  .footer-info-column p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .footer-info-column a {
+color:white;/* Blue link color */
+    text-decoration: none;
+  }
+  
+  .footer-info-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+
+  }
+  
+  .footer-logo img {
+    max-width: 160px;
+    height: auto;
+  }
+  
+  .footer-links {
+    background-color: #222; /* Slightly darker background for links section */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid #444;
+  }
+  
+  .footer-links-row {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  
+  .footer-links span {
+    color: #555; /* Separator line color */
+  }
+  
+  .footer-links p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 0;
+  }
+/* Social Section */
+.social-section {
+    margin-top: 70px;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 1px solid #444; /* Subtle border at the top */
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons .icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem; /* Icon size */
+    color: #ccc; /* Default icon color */
+    text-decoration: none;
+  }
+  
+  .social-icons .icon :hover {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem; /* Icon size */
+    color:#006dae;
+    text-decoration: none;
+  }
+  
+  
+  .acknowledgment p {
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .acknowledgment a {
+    color: #ccc;
+    
+    text-decoration: none;
+  }
+  
+  .acknowledgment a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-section {
+    padding: 40px;
+    flex: 1;
+  }
+  
+  .text-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .text-section button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .text-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .video-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .video-section iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
